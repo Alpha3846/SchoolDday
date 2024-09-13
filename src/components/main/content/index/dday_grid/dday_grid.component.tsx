@@ -15,8 +15,8 @@ export default function FilteredDdayValues() {
     const enabledDdayGrades = useAppSelector(state => state.enabledDdayGrades.enabled);
     const enabledDdaySemesters = useAppSelector(state => state.enabledDdaySemesters.enabled);
 
-    const first = dayjs("2023-08-16T08:30:00.000+09:00");
-    const second = dayjs("2024-01-05T12:20:00.000+09:00");
+    const first = dayjs("2024-08-16T08:30:00.000+09:00");
+    const second = dayjs("2025-01-05T12:20:00.000+09:00");
     const now = dayjs();
 
     useEffect(() => {

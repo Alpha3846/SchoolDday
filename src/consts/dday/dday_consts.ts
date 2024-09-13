@@ -17,17 +17,25 @@ type ddayListType = {
 
 const ddays: ddayListType = [
     {
-        name: "2학기 2차고사",
+        name: "2학기 1차고사",
         type: DdayType.EXAMINATION,
-        grades: [3],
         date: {
             start: date(false, 10, 30, 8, 50),
             end: date(false, 11, 1, 12, 10)
         }
     },
     {
+        name: "10월 전국연합학력평가",
+        type: DdayType.HOLIDAY,
+        date: {
+            start: date(false, 11, 16, 8, 10),
+            end: date(false, 11, 16, 17, 45)
+        }
+    },
+    {
         name: "대학수학능력시험",
         type: DdayType.HOLIDAY,
+        grades: [3],
         date: {
             start: date(false, 11, 16, 8, 10),
             end: date(false, 11, 16, 17, 45)

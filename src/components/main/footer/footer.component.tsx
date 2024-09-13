@@ -8,7 +8,7 @@ export default function Footer() {
             <div className={styles.body}>
                 <div>
                     <span>
-                        <h1>석동중학교 디데이 카운터</h1>
+                        <h1>남해해성고등학교 디데이 카운터</h1>
                         <p>버전 {pack.version}</p>
                     </span>
                     <p>Copyright (C) 2022-{dayjs().year()} AlphaKR93, Licenced under MIT License.</p>

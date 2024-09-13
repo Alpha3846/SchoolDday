@@ -11,7 +11,7 @@ export default function Header() {
         <header className={styles.header}>
             <nav>
                 <Link className={styles.logo} href="/">
-                    석동중 디데이
+                    남해해성고 D-day
                 </Link>
                 <div className={styles.links}>
                     <Link href="/">디데이</Link>
