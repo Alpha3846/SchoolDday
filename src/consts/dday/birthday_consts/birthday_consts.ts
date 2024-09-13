@@ -5,11 +5,5 @@ const birthdays: {
     grade: number;
     class: number;
     list: BirthdayConstsType;
-}[] = [
-    {
-        grade: 3,
-        class: 2,
-        list: birthdays302
-    }
-];
+}[] = [];
 export default birthdays;

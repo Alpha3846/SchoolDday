@@ -33,50 +33,6 @@ const ddays: ddayListType = [
             end: date(false, 11, 16, 17, 45)
         }
     },
-    {
-        name: "진로체험",
-        type: DdayType.EVENT,
-        grades: [3],
-        date: {
-            start: date(false, 11, 22, 8, 50),
-            end: date(false, 11, 22, 15, 0)
-        }
-    },
-    {
-        name: "2학기 2차고사",
-        type: DdayType.EXAMINATION,
-        grades: [1, 2],
-        date: {
-            start: date(false, 12, 4, 8, 50),
-            end: date(false, 12, 6, 12, 10)
-        }
-    },
-    {
-        name: "석동 축제",
-        type: DdayType.EVENT,
-        date: {
-            start: date(false, 12, 22, 8, 50),
-            end: date(false, 12, 22, 15, 0)
-        }
-    },
-    {
-        name: "종업식",
-        type: DdayType.EVENT,
-        grades: [1, 2],
-        date: {
-            start: date(false, 1, 5, 8, 50),
-            end: date(false, 1, 5, 12, 20)
-        }
-    },
-    {
-        name: "졸업식",
-        type: DdayType.EVENT,
-        grades: [3],
-        date: {
-            start: date(false, 1, 5, 8, 50),
-            end: date(false, 1, 5, 12, 20)
-        }
-    }
 ];
 
 export default function buildDdayList() {
@@ -101,12 +57,6 @@ export default function buildDdayList() {
             })
         );
     });
-    if (getCookie("rohunji") === "yeah")
-        returnValue.push({
-            name: "중력절",
-            type: DdayType.MISCELLANEOUS,
-            date: everyday(5, 23)
-        });
 
     return returnValue.sort((a, b) => a.date.start.valueOf() - b.date.start.valueOf());
 }

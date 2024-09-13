@@ -117,4 +117,4 @@ const anniversaries: {
         }
     }
 ];
-export default anniversaries;
+export default [];
