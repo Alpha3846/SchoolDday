@@ -16,7 +16,7 @@ export default function DdayBox(props: {
     };
     grades: number[] | undefined;
 }) {
-    const { name, type, date } = props;
+    const { name, type, date, grades } = props;
 
     return (
         <div className={styles.ddayBox}>

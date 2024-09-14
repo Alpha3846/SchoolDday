@@ -1,8 +1,8 @@
 "use client";
 
+import { DdayType } from "@/components/modules/dday_box/components/tags/type/type.component";
 import { useAppDispatch } from "@/store/store";
 import React, { useEffect, useState } from "react";
-import { DdayType } from "@/components/modules/dday_box/components/tags/type/type.component";
 import styles from "./slider.module.css";
 
 type SliderProps = {
@@ -36,6 +36,7 @@ export default function Slider(props: SliderProps) {
     return (
         <ul>
             <p className="text-primary">{name}</p>
+            {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
             <button
                 type="button"
                 onClick={() => dispatch(dispatcher)}
