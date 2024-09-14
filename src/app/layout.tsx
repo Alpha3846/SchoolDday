@@ -5,6 +5,7 @@ import MobileNavigationBarComponent from "@/components/main/mobile_navbar/mobile
 import AnalyticsProvider from "@/components/main/provider/analytics_provider";
 import Providers from "@/store/provider";
 import { Metadata } from "next";
+import Script from "next/script";
 import React from "react";
 import styles from "./layout.module.css";
 
@@ -18,12 +19,17 @@ export const metadata: Metadata = {
     ],
     creator: "AlphaKR93",
     publisher: "Alpha3846",
-    verification: { other: { "naver-site-verification": "c070ebcbedf1956dadcd0fa3f6c4207d16d21856" } }
+    verification: { other: { "naver-site-verification": "c070ebcbedf1956dadcd0fa3f6c4207d16d21856" } },
+    other: { "google-adsense-account": "ca-pub-1710052864536454" }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="ko" suppressHydrationWarning>
+            <Script
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1710052864536454"
+                crossOrigin="anonymous"
+            />
             <body>
                 <Providers>
                     <div className={styles.body}>
@@ -44,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </Providers>
                 <AnalyticsProvider />
             </body>
+            <Script id="adsbygoogle-push">(adsbygoogle = window.adsbygoogle || []).push({})</Script>
         </html>
     );
 }

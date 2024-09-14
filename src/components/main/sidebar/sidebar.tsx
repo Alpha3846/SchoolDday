@@ -17,6 +17,14 @@ export default function Sidebar(props: { button: boolean }) {
             ) : null}
             <OptionsSection />
             <TypeSection />
+            <ins
+                className="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client="ca-pub-1710052864536454"
+                data-ad-slot="7665414865"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+            />
         </ul>
     );
 }
