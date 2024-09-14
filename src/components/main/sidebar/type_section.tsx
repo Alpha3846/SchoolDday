@@ -1,9 +1,9 @@
 "use client";
 
 import Slider from "@/components/assets/slider/slider.component";
-import { useAppSelector } from "@/store/store";
-import { toggleDdayType } from "@/store/reducer/dday/enabled_types.slice";
 import { DdayType } from "@/components/modules/dday_box/components/tags/type/type.component";
+import { toggleDdayType } from "@/store/reducer/dday/enabled_types.slice";
+import { useAppSelector } from "@/store/store";
 
 export default function TypeSection() {
     const enabledTypes = useAppSelector(state => state.enabledDdayTypes.enabled);
@@ -38,13 +38,6 @@ export default function TypeSection() {
                 onValue={{ background: "#7a7a7a", shadowPrimary: "#686868", shadowSecondary: "#8c8c8c" }}
                 offValue={{ bgPrimary: "#c5c5c5", bgSecondary: "#a6a6a6" }}
                 dispatcher={toggleDdayType(DdayType.MISCELLANEOUS)}
-            />
-            <Slider
-                name="생일"
-                enabled={enabledTypes.includes(DdayType.BIRTHDAY)}
-                onValue={{ background: "#ccb128", shadowPrimary: "#ad9622", shadowSecondary: "#ebcc2e" }}
-                offValue={{ bgPrimary: "#fff48e", bgSecondary: "#e6cd78" }}
-                dispatcher={toggleDdayType(DdayType.BIRTHDAY)}
             />
         </li>
     );

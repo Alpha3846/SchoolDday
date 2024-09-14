@@ -241,4 +241,3 @@ const changelog: {
     }
 ].reverse();
 export default changelog;
-export const ddayLastUpdateYear = 2023;

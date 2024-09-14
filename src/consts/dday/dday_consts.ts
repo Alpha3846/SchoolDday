@@ -1,9 +1,6 @@
 import { DdayType } from "@/components/modules/dday_box/components/tags/type/type.component";
 import dayjs from "dayjs";
-import anniversaries from "@/consts/dday/anniversary_consts";
-import birthdays from "@/consts/dday/birthday_consts/birthday_consts";
-import { getCookie } from "cookies-next";
-import { date, everyday } from "./builder";
+import { date } from "./builder";
 
 type ddayListType = {
     name: string;
@@ -17,54 +14,67 @@ type ddayListType = {
 
 const ddays: ddayListType = [
     {
-        name: "2학기 1차고사",
+        name: "2학기 1차평가",
         type: DdayType.EXAMINATION,
         date: {
-            start: date(false, 10, 30, 8, 50),
-            end: date(false, 11, 1, 12, 10)
+            start: date(false, 9, 26),
+            end: date(false, 9, 30)
         }
     },
     {
         name: "10월 전국연합학력평가",
-        type: DdayType.HOLIDAY,
+        type: DdayType.EXAMINATION,
         date: {
-            start: date(false, 11, 16, 8, 10),
-            end: date(false, 11, 16, 17, 45)
+            start: date(false, 10, 15),
+            end: date(false, 10, 15)
         }
     },
     {
         name: "대학수학능력시험",
-        type: DdayType.HOLIDAY,
-        grades: [3],
+        type: DdayType.EXAMINATION,
         date: {
-            start: date(false, 11, 16, 8, 10),
-            end: date(false, 11, 16, 17, 45)
+            start: date(false, 11, 14),
+            end: date(false, 11, 14)
         }
     },
+    {
+        name: "2학기 2차평가",
+        type: DdayType.EXAMINATION,
+        date: {
+            start: date(false, 12, 2),
+            end: date(false, 12, 4)
+        }
+    },
+    {
+        name: "동백제",
+        type: DdayType.EVENT,
+        date: {
+            start: date(false, 12, 18),
+            end: date(false, 12, 18)
+        }
+    },
+    {
+        name: "졸업식",
+        type: DdayType.EVENT,
+        date: {
+            start: date(false, 12, 23),
+            end: date(false, 12, 23)
+        }
+    },
+    {
+        name: "겨울방학식 및 종업식",
+        type: DdayType.EVENT,
+        date: {
+            start: date(false, 12, 24),
+            end: date(false, 12, 2)
+        }
+    }
 ];
 
 export default function buildDdayList() {
     const returnValue: ddayListType = [];
 
     ddays.forEach(dday => returnValue.push(dday));
-    anniversaries.forEach(anniversary =>
-        returnValue.push({
-            name: anniversary.name,
-            type: anniversary.isHoliday ? DdayType.HOLIDAY : DdayType.MISCELLANEOUS,
-            grades: anniversary.grades,
-            date: anniversary.date
-        })
-    );
-    birthdays.forEach(birthdayList => {
-        birthdayList.list.forEach(birthday =>
-            returnValue.push({
-                name: `${birthday.name}의 생일`,
-                type: DdayType.BIRTHDAY,
-                grades: [birthdayList.grade],
-                date: birthday.date
-            })
-        );
-    });
 
     return returnValue.sort((a, b) => a.date.start.valueOf() - b.date.start.valueOf());
 }
