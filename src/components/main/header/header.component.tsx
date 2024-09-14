@@ -30,7 +30,7 @@ export default function Header() {
                     </div>
                     <ul className={styles.button}>
                         <li>
-                            <a className="button default" href="https://github.com/Alpha8396/SchoolDday">
+                            <a className="button default" href="https://github.com/Alpha3846/SchoolDday">
                                 소스코드
                             </a>
                         </li>

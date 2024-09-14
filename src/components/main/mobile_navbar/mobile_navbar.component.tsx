@@ -35,7 +35,7 @@ export default function MobileNavigationBarComponent() {
                         <ButtonSection />
                     </div>
                     <p className={styles.license}>
-                        (C) 2024 Alpha3896, Licensed under MIT License.
+                        (C) 2024 Alpha3846, Licensed under MIT License.
                         <br />
                         Original by AlphaKR93
                     </p>

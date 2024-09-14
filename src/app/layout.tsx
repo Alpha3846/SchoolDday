@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     applicationName: "남해해성고등학교 라이브 디데이 카운터",
     authors: [
         { name: "AlphaKR93", url: "https://alpha93.kr/" },
-        { name: "Alpha8396", url: "https://github.com/Alpha8396/" }
+        { name: "Alpha3846", url: "https://github.com/Alpha3846/" }
     ],
     creator: "AlphaKR93",
-    publisher: "Alpha8396",
+    publisher: "Alpha3846",
     verification: { other: { "naver-site-verification": "c070ebcbedf1956dadcd0fa3f6c4207d16d21856" } }
 };
 

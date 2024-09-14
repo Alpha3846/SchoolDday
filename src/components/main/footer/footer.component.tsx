@@ -10,7 +10,7 @@ export default function Footer() {
                         <h1>남해해성고등학교 디데이 카운터</h1>
                         <p>버전 {pack.version}</p>
                     </span>
-                    <p>Copyright (C) 2024 Alpha8396, Licenced under MIT License.</p>
+                    <p>Copyright (C) 2024 Alpha3846, Licenced under MIT License.</p>
                     <p>Original by AlphaKR93</p>
                 </div>
                 <div className="flex gap-2">
