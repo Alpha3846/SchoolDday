@@ -1,5 +1,4 @@
 import * as pack from "@/../package.json";
-import dayjs from "dayjs";
 import styles from "./footer.module.css";
 
 export default function Footer() {
@@ -11,11 +10,20 @@ export default function Footer() {
                         <h1>남해해성고등학교 디데이 카운터</h1>
                         <p>버전 {pack.version}</p>
                     </span>
-                    <p>Copyright (C) 2022-{dayjs().year()} AlphaKR93, Licenced under MIT License.</p>
+                    <p>Copyright (C) 2024 Alpha3846, Licenced under MIT License.</p>
+                    <p>Original by AlphaKR93</p>
                 </div>
-                <a href="https://status.alpha93.kr/" className="button default">
-                    사이트 상태
-                </a>
+                <div className="flex gap-2">
+                    <a
+                        href="https://github.com/Alchives/SchoolDday/"
+                        className="button default flex w-24 justify-center"
+                    >
+                        오리지널
+                    </a>
+                    <a href="https://qr.kakaopay.com/FPQhdrTiU" className="button default flex w-24 justify-center">
+                        후원하기
+                    </a>
+                </div>
             </div>
         </footer>
     );

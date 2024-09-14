@@ -1,12 +1,11 @@
-import dayjs from "dayjs";
-import "dayjs/locale/ko";
-import SemesterComponent from "@/components/modules/dday_box/components/tags/date/semester/semester.component";
-import RemainDateComponent from "@/components/modules/dday_box/components/tags/date/remain/remains.component";
 import CounterComponent from "@/components/modules/dday_box/components/content/counter/counter.component";
 import DateSection from "@/components/modules/dday_box/components/content/date/date.component";
-import styles from "./dday_box.module.css";
-import GradeSpan from "./components/tags/grades/grades.component";
+import RemainDateComponent from "@/components/modules/dday_box/components/tags/date/remain/remains.component";
+import SemesterComponent from "@/components/modules/dday_box/components/tags/date/semester/semester.component";
+import dayjs from "dayjs";
+import "dayjs/locale/ko";
 import TypeSpan, { DdayType } from "./components/tags/type/type.component";
+import styles from "./dday_box.module.css";
 
 export default function DdayBox(props: {
     name: string;
@@ -17,7 +16,7 @@ export default function DdayBox(props: {
     };
     grades: number[] | undefined;
 }) {
-    const { name, type, date, grades } = props;
+    const { name, type, date } = props;
 
     return (
         <div className={styles.ddayBox}>
@@ -29,7 +28,6 @@ export default function DdayBox(props: {
                             <SemesterComponent date={date} />
                             <RemainDateComponent start={date.start.valueOf()} end={date.end.valueOf()} />
                         </span>
-                        <GradeSpan grades={grades} />
                         <TypeSpan type={type} />
                     </section>
                     <CounterComponent start={date.start.valueOf()} end={date.end.valueOf()} />

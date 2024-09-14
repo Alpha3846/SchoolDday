@@ -1,5 +1,4 @@
 import dayjs from "dayjs";
-import { ddayLastUpdateYear } from "../changelog";
 
 export type BirthdayConstsType = {
     name: string;
@@ -11,7 +10,7 @@ export type BirthdayConstsType = {
 
 export function date(updateWhenPass: boolean, month: number, day: number, hour = 0, minute = 0, second = 0, milli = 0) {
     const returnValue = dayjs(
-        `${ddayLastUpdateYear}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}T${hour
+        `${dayjs().year()}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}T${hour
             .toString()
             .padStart(2, "0")}:${minute.toString().padStart(2, "0")}:${second.toString().padStart(2, "0")}.${milli
             .toString()

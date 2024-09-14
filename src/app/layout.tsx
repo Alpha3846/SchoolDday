@@ -1,21 +1,23 @@
 import "./globals.css";
-import React from "react";
-import Header from "@/components/main/header/header.component";
 import Footer from "@/components/main/footer/footer.component";
-import { Metadata } from "next";
-import AnalyticsProvider from "@/components/main/provider/analytics_provider";
+import Header from "@/components/main/header/header.component";
 import MobileNavigationBarComponent from "@/components/main/mobile_navbar/mobile_navbar.component";
+import AnalyticsProvider from "@/components/main/provider/analytics_provider";
 import Providers from "@/store/provider";
+import { Metadata } from "next";
+import React from "react";
 import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
-    title: "석동중 디데이",
-    description: "석동중학교 학생들을 위한 디데이 사이트입니다.",
-    applicationName: "석동중학교 라이브 디데이 카운터",
-    authors: [{ name: "AlphaKR93", url: "https://alpha93.kr/" }],
-    keywords: ["석동중", "석동중 디데이", "석동중 시험", "석동중 고사", "석동중 일정", "석동중 디데이", "석동중 행사"],
+    title: "남해해성고 디데이",
+    description: "남해해성고등학교 학생들을 위한 디데이 사이트입니다.",
+    applicationName: "남해해성고등학교 라이브 디데이 카운터",
+    authors: [
+        { name: "AlphaKR93", url: "https://alpha93.kr/" },
+        { name: "Alpha3846", url: "https://github.com/Alpha3846/" }
+    ],
     creator: "AlphaKR93",
-    publisher: "AlphaKR93",
+    publisher: "Alpha3846",
     verification: { other: { "naver-site-verification": "c070ebcbedf1956dadcd0fa3f6c4207d16d21856" } }
 };
 

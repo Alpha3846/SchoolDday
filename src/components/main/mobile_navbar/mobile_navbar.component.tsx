@@ -1,11 +1,10 @@
 "use client";
 
+import * as pack from "@/../package.json";
+import ButtonSection from "@/components/main/sidebar/button_section";
+import Sidebar from "@/components/main/sidebar/sidebar";
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import Sidebar from "@/components/main/sidebar/sidebar";
-import ButtonSection from "@/components/main/sidebar/button_section";
-import Link from "next/link";
-import * as pack from "@/../package.json";
 import styles from "./mobile_navbar.module.css";
 
 export default function MobileNavigationBarComponent() {
@@ -35,25 +34,18 @@ export default function MobileNavigationBarComponent() {
                     <div className={styles.buttons}>
                         <ButtonSection />
                     </div>
-                    <div className={styles.links}>
-                        <Link href="/" onClick={() => toggle()}>
-                            디데이
-                        </Link>
-                        <Link href="/links" onClick={() => toggle()}>
-                            유용한 링크
-                        </Link>
-                        <Link href="/about" onClick={() => toggle()}>
-                            사이트 정보
-                        </Link>
-                    </div>
-                    <p className={styles.license}>(C) 2023 AlphaKR93, Licensed under MIT License.</p>
+                    <p className={styles.license}>
+                        (C) 2024 Alpha3846, Licensed under MIT License.
+                        <br />
+                        Original by AlphaKR93
+                    </p>
                 </div>
             </div>
             <button className={styles.button} type="button" onClick={() => toggle()}>
                 <span className={styles.title}>
                     <p />
                     <span>
-                        <h1>석동중 디데이</h1>
+                        <h1>남해해성고 D-day</h1>
                         <p>버전 {pack.version}</p>
                     </span>
                     <ChevronUpIcon />
